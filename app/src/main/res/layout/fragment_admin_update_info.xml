@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context=".Admin.Login.AdminLogin"
+    android:background="@drawable/gradient_background"
+    >
+
+
+    <!-- Giriş Yap Butonu -->
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="124dp"
+        android:text="Admin Şifre Güncelle"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/passwordInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/rounded_edittext"
+        android:hint="Şifre"
+        android:inputType="textPassword"
+        android:padding="16dp"
+        android:textColorHint="#888888"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+    <Button
+        android:id="@+id/loginButton"
+        android:layout_width="122dp"
+        android:layout_height="59dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="28dp"
+        android:backgroundTint="#9F54B3"
+        android:onClick="login"
+        android:padding="16dp"
+        android:text="Güncelle"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/passwordInput" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

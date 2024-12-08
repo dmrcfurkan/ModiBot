@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "838115874491",
+    "project_id": "kullanicikayit-bd747",
+    "storage_bucket": "kullanicikayit-bd747.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:838115874491:android:8f9264e09d6b895f177b9e",
+        "android_client_info": {
+          "package_name": "com.example.modibot"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDJc-pikAisRkkouuHXgFA9IlhXWevdd08"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

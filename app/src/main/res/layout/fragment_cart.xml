@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5">
+
+    <!-- Başlık -->
+    <TextView
+        android:id="@+id/cartTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="Sepetim"
+        android:textColor="#212121"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Eğer sepet boşsa gösterilecek -->
+    <TextView
+        android:id="@+id/emptyCartMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="Sepetiniz şu anda boş. Premium üyelik seçmek için geri dönün."
+        android:textColor="#757575"
+        android:textSize="18sp"
+        android:visibility="gone"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/cartTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Sepet öğeleri için kaydırılabilir liste -->
+    <ScrollView
+        android:id="@+id/cartScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:visibility="visible"
+        app:layout_constraintTop_toBottomOf="@id/cartTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:id="@+id/cartItemsContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Her bir ürün burada dinamik olarak eklenecek -->
+            <!-- Örnek öğe -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="16dp"
+                android:padding="16dp"
+                android:background="@drawable/rounded_background">
+
+                <TextView
+                    android:id="@+id/itemTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Premium Üyelik"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/itemPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="₺29,99"
+                    android:textColor="#B3B3B3"
+                    android:textSize="18sp" />
+            </LinearLayout>
+            <!-- Örnek öğe sonu -->
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Toplam fiyat ve ödeme düğmesi -->
+    <LinearLayout
+        android:id="@+id/checkoutContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:id="@+id/totalPrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Toplam: ₺29,99"
+            android:textColor="#212121"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginBottom="8dp" />
+
+        <Button
+            android:id="@+id/checkoutButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#4CAF50"
+            android:text="Ödemeye Devam Et"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+        <Button
+            android:id="@+id/clearCart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#4CAF50"
+            android:text="Sepeti Temizle"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,271 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#B64E70"
+    tools:context=".User.Mode.Mode_select">
+
+    <!-- Başlık -->
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:gravity="center"
+        android:text="Modunuzu Seçin"
+        android:textColor="@color/white"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Grid Layout -->
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:columnCount="2"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView">
+
+        <!-- Enerjik Mod -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_energy"
+            android:layout_width="170dp"
+            android:layout_height="245dp"
+            android:layout_margin="16dp"
+            android:backgroundTint="#FF6F61"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!-- İkon -->
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginBottom="8dp"
+                    android:contentDescription="Enerjik İkon"
+                    android:src="@drawable/energy_new"
+                    app:tint="#312B2B" />
+
+                <!-- Başlık -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Enerjik Mod"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <!-- Açıklama -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center"
+                    android:text="Enerji dolu hissetmek için ideal bir mod."
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+
+                <!-- Düğme -->
+                <Button
+                    android:id="@+id/btn_energy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:backgroundTint="#754153"
+                    android:text="Seç"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Yorgun Mod -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_tired"
+            android:layout_width="170dp"
+            android:layout_height="match_parent"
+            android:layout_margin="16dp"
+            android:backgroundTint="#4A90E2"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!-- İkon -->
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginBottom="8dp"
+                    android:contentDescription="Yorgun İkon"
+                    android:src="@drawable/yawn_new" />
+
+                <!-- Başlık -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Yorgun Mod"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <!-- Açıklama -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center"
+                    android:text="Dinlenmek ve huzur bulmak için mükemmel."
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+
+                <!-- Düğme -->
+                <Button
+                    android:id="@+id/btn_tired"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:backgroundTint="#F2AF5550"
+                    android:text="Seç"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Mutlu Mod -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_happy"
+            android:layout_width="170dp"
+            android:layout_height="250dp"
+            android:layout_margin="16dp"
+            android:backgroundTint="#D8EDAB1F"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!-- İkon -->
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginBottom="8dp"
+                    android:contentDescription="Mutlu İkon"
+                    android:src="@drawable/smile_new" />
+
+                <!-- Başlık -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Mutlu Mod"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <!-- Açıklama -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center"
+                    android:text="Pozitif ve neşeli bir gün için ideal."
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+
+                <!-- Düğme -->
+                <Button
+                    android:id="@+id/btn_happy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:backgroundTint="#833A3A"
+                    android:text="Seç"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Üzgün Mod -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_sad"
+            android:layout_width="170dp"
+            android:layout_height="250dp"
+            android:layout_margin="16dp"
+            android:backgroundTint="#7F8C8D"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!-- İkon -->
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginBottom="8dp"
+                    android:contentDescription="Üzgün İkon"
+                    android:src="@drawable/sad_new" />
+
+                <!-- Başlık -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Üzgün Mod"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <!-- Açıklama -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center"
+                    android:text="Hüzünlü bir anı paylaşmak için uygun."
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+
+                <!-- Düğme -->
+                <Button
+                    android:id="@+id/btn_sad"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:backgroundTint="@color/white"
+                    android:text="Seç"
+                    android:textColor="#7F8C8D"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </GridLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

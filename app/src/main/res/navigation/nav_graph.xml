@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/admin_User_Login">
+    <fragment
+        android:id="@+id/login"
+        android:name="com.example.modibot.User.Login.Login"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_login_to_signFragment"
+            app:destination="@id/signFragment" />
+        <action
+            android:id="@+id/action_login_to_mainMenu"
+            app:destination="@id/mainMenu" />
+        <action
+            android:id="@+id/action_login_to_inactive"
+            app:destination="@id/inactive" />
+    </fragment>
+    <fragment
+        android:id="@+id/signFragment"
+        android:name="com.example.modibot.User.Sign_in.SignFragment"
+        android:label="fragment_sign"
+        tools:layout="@layout/fragment_sign" >
+        <action
+            android:id="@+id/action_signFragment_to_login"
+            app:destination="@id/login" />
+    </fragment>
+    <fragment
+        android:id="@+id/admin_User_Login"
+        android:name="com.example.modibot.Admin_User.Admin_User_Login"
+        android:label="fragment_admin__user__login"
+        tools:layout="@layout/fragment_admin__user__login" >
+        <action
+            android:id="@+id/action_admin_User_Login_to_login"
+            app:destination="@id/login" />
+        <action
+            android:id="@+id/action_admin_User_Login_to_adminLogin"
+            app:destination="@id/adminLogin" />
+    </fragment>
+    <fragment
+        android:id="@+id/mode_select"
+        android:name="com.example.modibot.User.Mode.Mode_select"
+        android:label="fragment_mode_select"
+        tools:layout="@layout/fragment_mode_select" >
+        <action
+            android:id="@+id/action_mode_select_to_suggestion"
+            app:destination="@id/suggestion" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainMenu"
+        android:name="com.example.modibot.User.Main_Menu.mainMenu"
+        android:label="fragment_main_menu"
+        tools:layout="@layout/fragment_main_menu" >
+        <action
+            android:id="@+id/action_mainMenu_to_mode_select"
+            app:destination="@id/mode_select" />
+        <action
+            android:id="@+id/action_mainMenu_to_smartAssistance"
+            app:destination="@id/smartAssistance" />
+        <argument
+            android:name="kullaniciAdi"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_mainMenu_to_manageProfileFragment"
+            app:destination="@id/manageProfileFragment" />
+        <action
+            android:id="@+id/action_mainMenu_to_premium"
+            app:destination="@id/premium" />
+    </fragment>
+    <fragment
+        android:id="@+id/suggestion"
+        android:name="com.example.modibot.User.Suggestion.Suggestion"
+        android:label="fragment_suggestion"
+        tools:layout="@layout/fragment_suggestion" >
+        <argument
+            android:name="suggestion"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/smartAssistance"
+        android:name="com.example.modibot.User.Smart_Assistance.SmartAssistance"
+        android:label="fragment_smart_assistance"
+        tools:layout="@layout/fragment_smart_assistance" />
+    <fragment
+        android:id="@+id/adminLogin"
+        android:name="com.example.modibot.Admin.Login.AdminLogin"
+        android:label="fragment_admin_login"
+        tools:layout="@layout/fragment_admin_login" >
+        <action
+            android:id="@+id/action_adminLogin_to_userOrProduct"
+            app:destination="@id/userOrProduct" />
+    </fragment>
+    <fragment
+        android:id="@+id/manageUser"
+        android:name="com.example.modibot.Admin.Manage.ManageUser"
+        android:label="fragment_manage_user"
+        tools:layout="@layout/fragment_manage_user" >
+        <action
+            android:id="@+id/action_manageUser_to_addUser"
+            app:destination="@id/addUser" />
+        <action
+            android:id="@+id/action_manageUser_to_user_info"
+            app:destination="@id/user_info" />
+    </fragment>
+    <fragment
+        android:id="@+id/addUser"
+        android:name="com.example.modibot.Admin.Manage.Add_User.AddUser"
+        android:label="fragment_add_user"
+        tools:layout="@layout/fragment_add_user" >
+        <action
+            android:id="@+id/action_addUser_to_manageUser"
+            app:destination="@id/manageUser" />
+    </fragment>
+    <fragment
+        android:id="@+id/user_info"
+        android:name="com.example.modibot.Admin.Manage.UserInfo.User_info"
+        android:label="fragment_user_info"
+        tools:layout="@layout/fragment_user_info" >
+        <argument android:name="userId"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_user_info_to_showUserCart"
+            app:destination="@id/showUserCart" />
+    </fragment>
+    <fragment
+        android:id="@+id/manageProfileFragment"
+        android:name="com.example.modibot.User.Profile.ManageProfileFragment"
+        android:label="fragment_manage_profile"
+        tools:layout="@layout/fragment_manage_profile" >
+        <action
+            android:id="@+id/action_manageProfileFragment_to_login"
+            app:destination="@id/login" />
+    </fragment>
+    <fragment
+        android:id="@+id/payment"
+        android:name="com.example.modibot.User.Payment.Payment"
+        android:label="Payment" >
+        <action
+            android:id="@+id/action_payment_to_mainMenu"
+            app:destination="@id/mainMenu" />
+    </fragment>
+    <fragment
+        android:id="@+id/premium"
+        android:name="com.example.modibot.User.Premium.Premium"
+        android:label="Premium" >
+        <action
+            android:id="@+id/action_premium_to_mainMenu"
+            app:destination="@id/mainMenu" />
+        <action
+            android:id="@+id/action_premium_to_cartFragment2"
+            app:destination="@id/cartFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/inactive"
+        android:name="com.example.modibot.User.Inactive.Inactive"
+        android:label="fragment_inactive"
+        tools:layout="@layout/fragment_inactive" >
+        <action
+            android:id="@+id/action_inactive_to_login"
+            app:destination="@id/login" />
+    </fragment>
+    <fragment
+        android:id="@+id/cartFragment2"
+        android:name="com.example.modibot.User.Premium.CartFragment"
+        android:label="CartFragment" >
+        <argument
+            android:name="uyelik"
+            app:argType="string" />
+        <argument
+            android:name="fiyat"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_cartFragment2_to_payment"
+            app:destination="@id/payment" />
+        <action
+            android:id="@+id/action_cartFragment2_to_premium"
+            app:destination="@id/premium" />
+    </fragment>
+    <fragment
+        android:id="@+id/manageProduct"
+        android:name="com.example.modibot.Admin.Manage.ManageProduct.ManageProduct"
+        android:label="ManageProduct" />
+    <fragment
+        android:id="@+id/userOrProduct"
+        android:name="com.example.modibot.Admin.Manage.GoProductOrUser.userOrProduct"
+        android:label="fragment_user_or_product"
+        tools:layout="@layout/fragment_user_or_product" >
+        <action
+            android:id="@+id/action_userOrProduct_to_manageUser"
+            app:destination="@id/manageUser" />
+        <action
+            android:id="@+id/action_userOrProduct_to_manageProduct"
+            app:destination="@id/manageProduct" />
+        <action
+            android:id="@+id/action_userOrProduct_to_adminUpdateInfo"
+            app:destination="@id/adminUpdateInfo" />
+    </fragment>
+    <fragment
+        android:id="@+id/showUserCart"
+        android:name="com.example.modibot.Admin.Manage.ShowUserCart.ShowUserCart"
+        android:label="fragment_show_user_cart"
+        tools:layout="@layout/fragment_show_user_cart" >
+        <argument
+            android:name="id"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/adminUpdateInfo"
+        android:name="com.example.modibot.Admin.Manage.AdminUpdateInfo.AdminUpdateInfo"
+        android:label="AdminUpdateInfo" >
+        <action
+            android:id="@+id/action_adminUpdateInfo_to_adminLogin"
+            app:destination="@id/adminLogin" />
+    </fragment>
+</navigation>
